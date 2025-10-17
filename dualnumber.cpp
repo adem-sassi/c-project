@@ -2,6 +2,24 @@
 #include <iostream>
 #include <cmath>
 
+/* SUGGESTION:
+ * The code does not compile
+ * A lot of overloads are missing:
+ * * operator+(dualNumber, double)
+ * * operator+(double, dualNumber)
+ * * operator-(dualNumber, double)
+ * * operator-(double, dualNumber)
+ * * operator*(dualNumber, dualNumber)
+ * * operator*(dualNumber, double)
+ * * operator*(double, dualNumber)
+ * * operator/(dualNumber, dualNumber)
+ * * operator/(dualNumber, double)
+ * * operator/(double, dualNumber)
+ * * operator<<(std::ostream& os, const DualNumber& n)
+ * Avoid using `using namespace std;`
+ * Comment your code.
+ *
+ */
 using namespace std;
 struct dualNumber {
     double real; 
@@ -14,7 +32,7 @@ struct dualNumber {
         return dualNumber(real - n.real, dual - n.dual);
     }
     dualNumber operator*(const dualNumber& n )const{
-        return(real * n.real, dual * n.dual );
+        return(real * n.real, dual * n.dual ); /* SUGGESTION: That is not the correct expression nor syntax. */
     }
 };
 int  main() {
